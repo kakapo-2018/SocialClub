@@ -67,7 +67,7 @@ POSTS:
 - ID: primary key, autoincrement, integer
 - User_ID: secondary key, integer
 - Title: string
-- Description: string
+- Content: string
 - Category: string
 - Expirty date: date
 - Post date: date
