@@ -1,4 +1,7 @@
 # SocialClub
+The idea of this app is to create a "billboard" style site for people who would like to offer Goods, Services or Food. 
+
+To connect people who may need goods, services and food with people who can and would like to.
 
 Hey I'm a readme
 
