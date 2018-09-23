@@ -34,7 +34,7 @@ POST /API/newpost - writes new post to posts DB<br/>
 POST /API/register - adds new user to user DB<br/>
 GET /API/login - logs registered user in and routes to logged in page
 
-STRETCH:
+STRETCH:<br/>
 POST /API/posts/:id/message - writes message against post to message DB<br/>
 DEL /API/posts/:id - deletes post from posts DB<br/>
 UPDATE /API/posts/:id - edits post from posts DB 
