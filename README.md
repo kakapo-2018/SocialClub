@@ -28,15 +28,15 @@ Richard - Git Master / Deployer
 
 <strong>API:</strong>
 
-GET /API/posts/:category - gets list of posts from selected catergory
-GET /API/posts/:id - gets individual posts
-POST /API/newpost - writes new post to posts DB
-POST /API/register - adds new user to user DB
+GET /API/posts/:category - gets list of posts from selected category<br/>
+GET /API/posts/:id - gets individual posts<br/>
+POST /API/newpost - writes new post to posts DB<br/>
+POST /API/register - adds new user to user DB<br/>
 GET /API/login - logs registered user in and routes to logged in page
 
 STRETCH:
-POST /API/posts/:id/message - writes message against post to message DB
-DEL /API/posts/:id - deletes post from posts DB
+POST /API/posts/:id/message - writes message against post to message DB<br/>
+DEL /API/posts/:id - deletes post from posts DB<br/>
 UPDATE /API/posts/:id - edits post from posts DB 
 
 <strong>MVP:</strong>
