@@ -20,10 +20,10 @@ You should now be able to register and login accounts
 
 <strong>TEAM:</strong>
 
-Cameron - Product Owner
-Welli
-Dani
-Luke
+Cameron - Product Owner<br/>
+Welli<br/>
+Dani<br/>
+Luke<br/>
 Richard - Git Master / Deployer
 
 <strong>API:</strong>
