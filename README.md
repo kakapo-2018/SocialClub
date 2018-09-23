@@ -69,8 +69,8 @@ POSTS:
 - Title: string
 - Content: string
 - Category: string
-- Expirty date: date
-- Post date: date
+- Exp date: date
+- Created: date
 
 MESSAGES:
 - ID: primary key, autoincrement, integer
