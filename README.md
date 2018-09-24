@@ -40,7 +40,7 @@ Example:
    ] <br/>
  }<br/>   
 
-GET /API/posts/:id - gets individual posts<br/>
+GET /API/posts/post/:id - gets individual posts<br/>
 Example:<br/>
 {<br/>
   Name: Joe Blog<br/>
