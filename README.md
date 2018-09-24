@@ -29,8 +29,35 @@ Richard - Git Master / Deployer
 <strong>API:</strong>
 
 GET /API/posts/:category - gets list of posts from selected category<br/>
+Example:
+{
+  [
+    {
+      id: 1
+      title: Work
+      date: 2342522366
+     },
+   ]
+ }   
+
 GET /API/posts/:id - gets individual posts<br/>
+Example:
+{
+  Name: Joe Blog
+  Title: Need help with lawnmowing
+  Content: I have a massive lawn that needs mowing. I can pick you up and drop off after. I can pay cash and provide a meal
+  Created: 2345252345
+  Exp date: 34536356356
+}
+
 POST /API/newpost - writes new post to posts DB<br/>
+Example:
+{
+  
+}
+
+
+
 POST /API/register - adds new user to user DB<br/>
 GET /API/login - logs registered user in and routes to logged in page
 
