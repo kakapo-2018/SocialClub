@@ -101,23 +101,23 @@ User will have a one to many relationship to Posts.
 Posts will have a one to many relationship to Messages.
 
 USER:
-- ID: primary key, autoincrement, integer
-- Name: string
-- User name: string
-- Email: string
-- Password: string
+- id: primary key, autoincrement, integer
+- name: string
+- user name: string
+- email: string
+- password: string
 
 POSTS:
-- ID: primary key, autoincrement, integer
-- User_ID: secondary key, integer
-- Title: string
-- Content: string
-- Category: string
-- Exp date: date
-- Created: date
+- id: primary key, autoincrement, integer
+- user_id: secondary key, integer
+- title: string
+- content: string
+- category: string
+- exp date: date
+- created: date
 
 MESSAGES:
-- ID: primary key, autoincrement, integer
-- Posts_ID: secondary key, integer
-- Message: string
-- Date: date
+- id: primary key, autoincrement, integer
+- posts_id: secondary key, integer
+- message: string
+- date: date
