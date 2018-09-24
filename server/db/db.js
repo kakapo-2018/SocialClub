@@ -39,6 +39,26 @@ function postsCategory(category, testDB) {
   .where('category', category)
 }
 
+function postsIndividual(id, testDB){
+  const db = testDB || connection;
+  return db('posts')
+  .select()
+  .where('id', id)
+  .first()
+}
+
+function postNewPost(newPost, testDB){
+  const db = testDB || connection;
+  return db('post')
+  .insert(newPost)
+  .then(id => {
+    return db('post')
+    .where('id', id[0])
+    .first()
+  })
+}
+
+
 
 
 module.exports = {
@@ -46,5 +66,7 @@ module.exports = {
   userExists,
   createUser,
   getUserByName,
-  postsCategory
+  postsCategory,
+  postsIndividual,
+  postNewPost
 };
