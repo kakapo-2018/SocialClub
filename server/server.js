@@ -23,6 +23,8 @@ server.use('/api/v1/auth', authRoutes);
 
 server.use('/api/ext', require('./routes/external'));
 
-server.use('api/posts', internal)
+server.use('/api/posts', internal)
+
+
 
 module.exports = server;
