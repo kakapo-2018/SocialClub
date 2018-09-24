@@ -53,13 +53,29 @@ Example:
 POST /API/newpost - writes new post to posts DB<br/>
 Example:
 {
-  
+  User_ID: 345
+  Category: Work
+  Title: Need help with lawnmowing
+  Content: I have a massive lawn that needs mowing. I can pick you up and drop off after. I can pay cash and provide a meal
+  Created: 2345252345
+  Exp date: 34536356356 
 }
 
-
-
 POST /API/register - adds new user to user DB<br/>
+Example:
+{
+  Name: Joe Blog
+  User name: Joe Blog 123
+  Email:joeblog@hotmail.com
+  Password: qoiwfn398(Y#JFmnad
+}
+
 GET /API/login - logs registered user in and routes to logged in page
+{
+  User name: Joe Blog 123
+  Password: password123  
+}
+
 
 STRETCH:<br/>
 POST /API/posts/:id/message - writes message against post to message DB<br/>
@@ -87,6 +103,7 @@ Posts will have a one to many relationship to Messages.
 USER:
 - ID: primary key, autoincrement, integer
 - Name: string
+- User name: string
 - Email: string
 - Password: string
 
