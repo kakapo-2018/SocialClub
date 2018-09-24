@@ -4,7 +4,7 @@ exports.up = function(knex, Promise) {
       table.increments('id').primary();
       table.integer('posts_id');
       table.string('message');
-      table.date('date');
+      table.integer('date');
     });
   };
   
