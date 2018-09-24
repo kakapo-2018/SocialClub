@@ -113,7 +113,7 @@ POSTS:
 - title: string
 - content: string
 - category: string
-- exp date: date
+- expdate: date
 - created: date
 
 MESSAGES:
