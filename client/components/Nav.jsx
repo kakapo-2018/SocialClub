@@ -20,7 +20,7 @@ class Nav extends React.Component {
         <div>
             <p>{this.props.page}</p>
             <button type="button" class="btn btn-primary" onClick={() =>this.props.dispatch(fetchDataByCategory('goods'))}>Goods</button>
-            <button type="button" class="btn btn-primary" onClick={() =>this.props.dispatch(fetchDataByCategory('jobs'))}>Jobs</button>
+            <button type="button" class="btn btn-primary" onClick={() =>this.props.dispatch(fetchDataByCategory('work'))}>Work</button>
             <button type="button" class="btn btn-primary" onClick={() =>this.props.dispatch(fetchDataByCategory('food'))}>Food</button>
         </div>
     </Router>
