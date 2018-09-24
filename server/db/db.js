@@ -47,6 +47,17 @@ function postsIndividual(id, testDB){
   .first()
 }
 
+function postNewPost(newPost, testDB){
+  const db = testDB || connection;
+  return db('post')
+  .insert(newPost)
+  .then(id => {
+    return db('post')
+    .where('id', id[0])
+    .first()
+  })
+}
+
 
 
 
@@ -56,5 +67,6 @@ module.exports = {
   createUser,
   getUserByName,
   postsCategory,
-  postsIndividual
+  postsIndividual,
+  postNewPost
 };

@@ -16,4 +16,13 @@ router.get('/post/:id', (req, res) => {
   })
 })
 
+// router.post('/newpost', (req, res) => {
+//   const category = req.body.category;
+//   const title = req.body.title;
+//   const content = req.body.content;
+//   const created = req.body.created;
+
+//   accessDB.postNewPost()
+// })
+
 module.exports = router;

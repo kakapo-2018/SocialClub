@@ -6,8 +6,8 @@ exports.up = function(knex, Promise) {
       table.string('title');
       table.string('content');
       table.string('category');
-      table.date('expdate');
-      table.date('created');
+      table.integer('expdate');
+      table.integer('created');
     });
   };
   

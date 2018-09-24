@@ -26,4 +26,5 @@ server.use('/api/ext', require('./routes/external'));
 server.use('/api/posts', internal)
 
 
+
 module.exports = server;
