@@ -43,11 +43,13 @@ Example:
 GET /API/posts/post/:id - gets individual posts<br/>
 Example:<br/>
 {<br/>
-  Name: Joe Blog<br/>
-  Title: Need help with lawnmowing<br/>
-  Content: I have a massive lawn that needs mowing. I can pick you up and drop off after. I can pay cash and provide a meal.<br/>
-  Created: 2345252345<br/>
-  Exp date: 34536356356<br/>
+  id: 1</br>
+  user_id: 2</br>
+  title: Need help with lawnmowing<br/>
+  content: I have a massive lawn that needs mowing. I can pick you up and drop off after. I can pay cash and provide a meal.<br/>
+  category
+  created: 2345252345<br/>
+  expdate: 34536356356<br/>
 }<br/>
 
 POST /API/newpost - writes new post to posts DB<br/>
