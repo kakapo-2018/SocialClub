@@ -16,13 +16,12 @@ router.get('/post/:id', (req, res) => {
   })
 })
 
-// router.post('/newpost', (req, res) => {
-//   const category = req.body.category;
-//   const title = req.body.title;
-//   const content = req.body.content;
-//   const created = req.body.created;
-
-//   accessDB.postNewPost()
-// })
+router.post('/newpost', (req, res) => {
+  let data = req.body
+  accessDB.postNewPost(data)
+  .then(posts => {
+    res.json(posts)
+  })
+})
 
 module.exports = router;
