@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, Link, Redirect } from 'react-router-dom';
-import {postsCategory} from '../../server/db/db'
+// import {postsCategory} from '../../server/db/db'
 
 class Nav extends React.Component {
     constructor(props) {
@@ -11,17 +11,6 @@ class Nav extends React.Component {
         }
     }
 
-    getGoods() {
-    
-    }
-
-    getJobs() {
-        
-    }
-
-    getFood() {
-        
-    }
 
    render() {
    return(
