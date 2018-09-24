@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const authRoutes = require('./routes/auth');
+const internal = require('./routes/internal')
 
 const server = express();
 
@@ -21,5 +22,7 @@ server.use('/api/v1', require('./routes/internal'));
 server.use('/api/v1/auth', authRoutes);
 
 server.use('/api/ext', require('./routes/external'));
+
+server.use('api/posts', internal)
 
 module.exports = server;

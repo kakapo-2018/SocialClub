@@ -32,9 +32,19 @@ function getUserByName(username, testDB) {
     .first();
 }
 
+function postsCategory(category, testDB) {
+  const db = testDB || connection;
+  return db('posts')
+  .select()
+  .where('category', category)
+}
+
+
+
 module.exports = {
   getUsers,
   userExists,
   createUser,
-  getUserByName
+  getUserByName,
+  postsCategory
 };
