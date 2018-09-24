@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, Link, Redirect } from 'react-router-dom';
-// import {postsCategory} from '../../server/db/db'
+import {connect} from 'react-redux'
+import {fetchDataByCategory} from '../actions/navbuttons'
 
 class Nav extends React.Component {
     constructor(props) {
@@ -18,9 +19,9 @@ class Nav extends React.Component {
     <Router>
         <div>
             <p>{this.props.page}</p>
-            <button type="button" class="btn btn-primary">Goods</button>
-            <button type="button" class="btn btn-primary">Jobs</button>
-            <button type="button" class="btn btn-primary">Food</button>
+            <button type="button" class="btn btn-primary" onClick={() =>this.props.dispatch(fetchDataByCategory('goods'))}>Goods</button>
+            <button type="button" class="btn btn-primary" onClick={() =>this.props.dispatch(fetchDataByCategory('jobs'))}>Jobs</button>
+            <button type="button" class="btn btn-primary" onClick={() =>this.props.dispatch(fetchDataByCategory('food'))}>Food</button>
         </div>
     </Router>
 
@@ -28,4 +29,4 @@ class Nav extends React.Component {
    }
 }
 
-export default Nav
+export default connect()(Nav)

@@ -3,6 +3,7 @@ import { HashRouter as Router, Route, Link, Redirect } from 'react-router-dom';
 
 import Header from './Header'
 import Nav from './Nav'
+import Posts from './Posts'
 
 class App extends React.Component {
     constructor(props) {
@@ -18,7 +19,8 @@ render () {
     return(
         <div>
             <Header />
-            <Nav page={this.state.location}/>
+            <Nav />
+            <Posts />
         </div>
 
     )
