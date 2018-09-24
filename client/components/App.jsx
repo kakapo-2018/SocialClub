@@ -9,7 +9,7 @@ class App extends React.Component {
         super(props)
 
         this.state = {
-
+            location: 'home'
         }
     }
 
@@ -18,7 +18,7 @@ render () {
     return(
         <div>
             <Header />
-            <Nav />
+            <Nav page={this.state.location}/>
         </div>
 
     )

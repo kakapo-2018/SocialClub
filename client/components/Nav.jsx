@@ -1,23 +1,36 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, Link, Redirect } from 'react-router-dom';
+import {postsCategory} from '../../server/db/db'
 
 class Nav extends React.Component {
     constructor(props) {
         super(props)
         
-        this.state = {
-            goods: goods,
-            services: services,
-            food: food
+        this.state = { 
+           
         }
     }
+
+    getGoods() {
     
+    }
+
+    getJobs() {
+        
+    }
+
+    getFood() {
+        
+    }
+
    render() {
    return(
+    
     <Router>
         <div>
+            <p>{this.props.page}</p>
             <button type="button" class="btn btn-primary">Goods</button>
-            <button type="button" class="btn btn-primary">Services</button>
+            <button type="button" class="btn btn-primary">Jobs</button>
             <button type="button" class="btn btn-primary">Food</button>
         </div>
     </Router>
