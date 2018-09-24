@@ -30,51 +30,51 @@ Richard - Git Master / Deployer
 
 GET /API/posts/:category - gets list of posts from selected category<br/>
 Example:
-{
-  [
-    {
-      id: 1
-      title: Work
-      date: 2342522366
-     },
-   ]
- }   
+{ <br/>
+  [ <br/>
+    { <br/>
+      id: 1 <br/>
+      title: Work <br/>
+      date: 2342522366 <br/>
+     }, <br/>
+   ] <br/>
+ }<br/>   
 
 GET /API/posts/:id - gets individual posts<br/>
-Example:
-{
-  Name: Joe Blog
-  Title: Need help with lawnmowing
-  Content: I have a massive lawn that needs mowing. I can pick you up and drop off after. I can pay cash and provide a meal
-  Created: 2345252345
-  Exp date: 34536356356
-}
+Example:<br/>
+{<br/>
+  Name: Joe Blog<br/>
+  Title: Need help with lawnmowing<br/>
+  Content: I have a massive lawn that needs mowing. I can pick you up and drop off after. I can pay cash and provide a meal.<br/>
+  Created: 2345252345<br/>
+  Exp date: 34536356356<br/>
+}<br/>
 
 POST /API/newpost - writes new post to posts DB<br/>
-Example:
-{
-  User_ID: 345
-  Category: Work
-  Title: Need help with lawnmowing
-  Content: I have a massive lawn that needs mowing. I can pick you up and drop off after. I can pay cash and provide a meal
-  Created: 2345252345
-  Exp date: 34536356356 
-}
+Example:<br/>
+{<br/>
+  User_ID: 345<br/>
+  Category: Work<br/>
+  Title: Need help with lawnmowing<br/>
+  Content: I have a massive lawn that needs mowing. I can pick you up and drop off after. I can pay cash and provide a meal<br/>
+  Created: 2345252345<br/>
+  Exp date: 34536356356 <br/>
+}<br/>
 
 POST /API/register - adds new user to user DB<br/>
-Example:
-{
-  Name: Joe Blog
-  User name: Joe Blog 123
-  Email:joeblog@hotmail.com
-  Password: qoiwfn398(Y#JFmnad
-}
+Example:<br/>
+{<br/>
+  Name: Joe Blog<br/>
+  User name: Joe Blog 123<br/>
+  Email:joeblog@hotmail.com<br/>
+  Password: qoiwfn398(Y#JFmnad<br/>
+}<br/>
 
 GET /API/login - logs registered user in and routes to logged in page
-{
-  User name: Joe Blog 123
-  Password: password123  
-}
+{<br/>
+  User name: Joe Blog 123<br/>
+  Password: password123  <br/>
+}<br/>
 
 
 STRETCH:<br/>
