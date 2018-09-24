@@ -9,4 +9,11 @@ router.get('/:category', (req, res) => {
   })
 });
 
+router.get('/post/:id', (req, res) => {
+  accessDB.postsIndividual(req.params.id)
+  .then(post => {
+    res.json(post)
+  })
+})
+
 module.exports = router;

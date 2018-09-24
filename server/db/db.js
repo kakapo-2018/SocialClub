@@ -39,6 +39,14 @@ function postsCategory(category, testDB) {
   .where('category', category)
 }
 
+function postsIndividual(id, testDB){
+  const db = testDB || connection;
+  return db('posts')
+  .select()
+  .where('id', id)
+  .first()
+}
+
 
 
 
@@ -47,5 +55,6 @@ module.exports = {
   userExists,
   createUser,
   getUserByName,
-  postsCategory
+  postsCategory,
+  postsIndividual
 };
