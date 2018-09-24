@@ -49,14 +49,21 @@ function postsIndividual(id, testDB){
 
 function postNewPost(newPost, testDB){
   const db = testDB || connection;
-  return db('post')
+  return db('posts')
   .insert(newPost)
-  .then(id => {
-    return db('post')
-    .where('id', id[0])
-    .first()
-  })
 }
+  
+  
+  
+  
+  
+  
+//   .then(id => {
+//     return db('post')
+//     .where('id', id[0])
+//     .first()
+//   })
+// }
 
 
 
