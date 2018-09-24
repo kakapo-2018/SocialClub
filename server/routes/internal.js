@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const accessDB = require('../db/exampleDbFunctions');
+const accessDB = require('../db/db');
 
-router.get('/', (req, res) => {
-  accessDB.getUsers().then(result => {
-    console.log('router DB result: \n', result);
-    res.json(result);
-  });
+router.get('/:category', (req, res) => {
+  accessDB.postsCategory(req.params.category)
+  .then(posts => {
+    res.json(posts)
+  })
 });
 
 module.exports = router;
