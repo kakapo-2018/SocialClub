@@ -20,23 +20,66 @@ You should now be able to register and login accounts
 
 <strong>TEAM:</strong>
 
-Cameron - Product Owner
-Welli
-Dani
-Luke
+Cameron - Product Owner<br/>
+Welli<br/>
+Dani<br/>
+Luke<br/>
 Richard - Git Master / Deployer
 
 <strong>API:</strong>
 
-GET /API/posts/:category - gets list of posts from selected catergory
-GET /API/posts/:id - gets individual posts
-POST /API/newpost - writes new post to posts DB
-POST /API/register - adds new user to user DB
-GET /API/login - logs registered user in and routes to logged in page
+GET /API/posts/:category - gets list of posts from selected category<br/>
+Example:
+{ <br/>
+  [ <br/>
+    { <br/>
+      id: 1 <br/>
+      title: Work <br/>
+      date: 2342522366 <br/>
+     }, <br/>
+   ] <br/>
+ }<br/>   
 
-STRETCH:
-POST /API/posts/:id/message - writes message against post to message DB
-DEL /API/posts/:id - deletes post from posts DB
+GET /API/posts/:id - gets individual posts<br/>
+Example:<br/>
+{<br/>
+  Name: Joe Blog<br/>
+  Title: Need help with lawnmowing<br/>
+  Content: I have a massive lawn that needs mowing. I can pick you up and drop off after. I can pay cash and provide a meal.<br/>
+  Created: 2345252345<br/>
+  Exp date: 34536356356<br/>
+}<br/>
+
+POST /API/newpost - writes new post to posts DB<br/>
+Example:<br/>
+{<br/>
+  User_ID: 345<br/>
+  Category: Work<br/>
+  Title: Need help with lawnmowing<br/>
+  Content: I have a massive lawn that needs mowing. I can pick you up and drop off after. I can pay cash and provide a meal<br/>
+  Created: 2345252345<br/>
+  Exp date: 34536356356 <br/>
+}<br/>
+
+POST /API/register - adds new user to user DB<br/>
+Example:<br/>
+{<br/>
+  Name: Joe Blog<br/>
+  User name: Joe Blog 123<br/>
+  Email:joeblog@hotmail.com<br/>
+  Password: qoiwfn398(Y#JFmnad<br/>
+}<br/>
+
+GET /API/login - logs registered user in and routes to logged in page
+{<br/>
+  User name: Joe Blog 123<br/>
+  Password: password123  <br/>
+}<br/>
+
+
+STRETCH:<br/>
+POST /API/posts/:id/message - writes message against post to message DB<br/>
+DEL /API/posts/:id - deletes post from posts DB<br/>
 UPDATE /API/posts/:id - edits post from posts DB 
 
 <strong>MVP:</strong>
@@ -58,21 +101,23 @@ User will have a one to many relationship to Posts.
 Posts will have a one to many relationship to Messages.
 
 USER:
-- ID: primary key, autoincrement, integer
-- Name: string
-- Email: string
-- Password: string
+- id: primary key, autoincrement, integer
+- name: string
+- user name: string
+- email: string
+- password: string
 
 POSTS:
-- ID: primary key, autoincrement, integer
-- User_ID: secondary key, integer
-- Title: string
-- Description: string
-- Expirty date: date
-- Post date: date
+- id: primary key, autoincrement, integer
+- user_id: secondary key, integer
+- title: string
+- content: string
+- category: string
+- expdate: date
+- created: date
 
 MESSAGES:
-- ID: primary key, autoincrement, integer
-- Posts_ID: secondary key, integer
-- Message: string
-- Date: date
+- id: primary key, autoincrement, integer
+- posts_id: secondary key, integer
+- message: string
+- date: date
