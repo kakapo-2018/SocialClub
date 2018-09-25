@@ -1,6 +1,6 @@
 const request = require('supertest');
 
-jest.mock('../server/db/exampleDbFunctions', () => ({
+jest.mock('../server/db/db', () => ({
   getUser: id =>
     Promise.resolve({ id: id, name: 'test user', email: 'test@user.nz' }),
   getUsers: () =>
@@ -12,29 +12,22 @@ jest.mock('../server/db/exampleDbFunctions', () => ({
 
 const server = require('../server/server');
 
-test('GET /', () => {
+test('Test invalid route', () => {
   return request(server)
-    .get('/api/v1/')
-    .expect(200)
+    .get('/api/')
+    .expect(404) // Error 404
     .then(res => {
-      console.log('response', res.text);
-
-      // .first()
-      // .text();
-      expect(res.text).toContain('@user.nz');
+      expect(res.text).toContain('Cannot'); //Cannot get /
     })
     .catch(err => expect(err).toBeNull());
 });
 
-// test('GET /', () => {
-//   jest
-//     .getUser(4)
-//     .then(res => {
-//       console.log('response', res.text);
-
-//       // .first()
-//       // .text();
-//       expect(res.text).toContain('@user.nz');
-//     })
-//     .catch(err => expect(err).toBeNull());
-// });
+test('Test home route', () => {
+  return request(server)
+    .get('/')
+    .expect(200) // Error 404
+    .then(res => {
+      expect(res.text).toContain('<div id="app"></div>'); //Cannot get /
+    })
+    .catch(err => expect(err).toBeNull());
+});
